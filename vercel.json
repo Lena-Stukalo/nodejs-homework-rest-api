@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "cross-env NODE_ENV=production node ./server.js",
-      "use": "@vercel/node"
+      "src": "app.js",
+      "use": "@now/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "app.js"
     }
   ]
 }
